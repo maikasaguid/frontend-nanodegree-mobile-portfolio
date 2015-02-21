@@ -450,9 +450,9 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
+    var newwidth = (document.querySelectorAll(".randomPizzaContainer")[0].offsetWidth + determineDx(document.querySelectorAll(".randomPizzaContainer")[0], size)) + 'px';
+
     for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
     }
   }
@@ -499,12 +499,14 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
+  var phase;
+  var scroll = document.body.scrollTop / 1250;
   frame++;
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    phase = Math.sin(scroll + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -517,6 +519,30 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
+
+function phase(num) {
+  switch(num) {
+    case 0:
+      value = 0;
+      break;
+    case 1:
+      value = 0.01745;
+      break;
+    case 2:
+      value = 0.0349;
+      break;
+    case 3:
+      value = 0.05233;
+      break;
+    case 4:
+      value = 0.0698;
+      break;
+  }
+
+  return value;
+}
+
+
 
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);

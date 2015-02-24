@@ -500,7 +500,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   var phase;
-  var scroll = document.body.scrollTop / 1250;
+  var scroll = document.body.scrollTop / 1250; //move scroll calculation out of loop
   frame++;
   window.performance.mark("mark_start_frame");
 
@@ -519,30 +519,6 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
-
-function phase(num) {
-  switch(num) {
-    case 0:
-      value = 0;
-      break;
-    case 1:
-      value = 0.01745;
-      break;
-    case 2:
-      value = 0.0349;
-      break;
-    case 3:
-      value = 0.05233;
-      break;
-    case 4:
-      value = 0.0698;
-      break;
-  }
-
-  return value;
-}
-
-
 
 // runs updatePositions on scroll
 window.addEventListener('scroll', updatePositions);

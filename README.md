@@ -15,15 +15,7 @@ None
 2. Make your changes.
 3. Send me a pull request.
 
-
-
-
-Below is the previous README
-
-
 ---
-
-
 
 ## Website Performance Optimization portfolio project
 

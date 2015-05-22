@@ -1,6 +1,22 @@
+Optimize Portfolio and Pizza
+===============================
+
+Udacity Front-End Web Developer Nanodegree Project 4: Website Optimization
+
 ## Instructions for Reviewers
 
 Please use this starting URL for PageSpeed http://cdn.rawgit.com/maikasaguid/frontend-nanodegree-mobile-portfolio/master/index.html
+
+## Resources
+None
+
+## How to Contribute
+1. Fork the latest code.
+2. Make your changes.
+3. Send me a pull request.
+
+Below is the previous README
+---
 
 ## Website Performance Optimization portfolio project
 

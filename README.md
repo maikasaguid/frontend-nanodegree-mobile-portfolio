@@ -3,9 +3,15 @@ Optimize Portfolio and Pizza
 
 Udacity Front-End Web Developer Nanodegree Project 4: Website Optimization
 
-## Instructions for Reviewers
+##Introduction
+In this project we are optimizing an Online Portfolio for speed and the webpage of a Pizza place for frame per second. The speed of the Online Portfolio will be verified through Google's PageSpeed Insight's Tool. Chrome's Dev Tools will show that the Pizza place webpage can operate at a high frame rate.
 
-Please use this starting URL for PageSpeed http://cdn.rawgit.com/maikasaguid/frontend-nanodegree-mobile-portfolio/master/index.html
+## Instructions
+1. For the Online Portfolio use this starting URL for to test for PageSpeed http://cdn.rawgit.com/maikasaguid/mobile-portfolio/master/index.html
+2. Navigate to the PageSpeed Insights site https://developers.google.com/speed/pagespeed/insights/
+3. Submit the URL in #1
+4. For the Pizza place use this URL http://cdn.rawgit.com/maikasaguid/mobile-portfolio/master/views/pizza.html
+5. Use Chrome Dev Tools to ensure the frame rate is 60 fps or higher.
 
 ## Resources
 None
